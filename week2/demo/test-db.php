@@ -12,7 +12,9 @@
             $db = new DBSpring();
             $phones = $db->getAllPhones();
             
-            var_dump($phones);
+            
+            include './views/view-phones.html.php';
+            
             
         ?>
     </body>
