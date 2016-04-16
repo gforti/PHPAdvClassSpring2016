@@ -7,10 +7,10 @@
     <body>
         <?php
         require_once './autoload.php';
-        
+                
         $util = new Util();
-        $validator = new Validator();
-        
+        $validator = new Validator();        
+        $phoneDAO = new PhoneDAO();
         
         $values = filter_input_array(INPUT_POST);
         
@@ -23,7 +23,7 @@
                        
         }
         
-        $phones = array();
+        $phones = $phoneDAO->readAll();
                 
         include './views/message.html.php';
         include './views/phone-form.html.php';        
