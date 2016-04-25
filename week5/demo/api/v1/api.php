@@ -84,4 +84,5 @@ try {
 }
 
 
-$restServer->outputReponse();
+echo $restServer->getReponse();
+die();
