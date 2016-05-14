@@ -22,6 +22,20 @@
          * To delete a file use unlink
          */
         
+        
+        // http://php.net/manual/en/class.splfileinfo.php
+        $finfo = new SplFileInfo($file);
+        
+        if ( $finfo->isFile() ) {
+            var_dump($finfo->getRealPath());
+            var_dump($finfo->getFilename());
+            var_dump(date("l F j, Y, g:i a", $finfo->getMTime()));
+            var_dump($finfo->getSize());
+            var_dump($finfo->getPathname());
+            
+        }
+        
+        
         ?>
     </body>
 </html>
